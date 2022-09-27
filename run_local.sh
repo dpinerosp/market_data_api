@@ -1,0 +1,1 @@
+uvicorn market_data.main:app --reload
