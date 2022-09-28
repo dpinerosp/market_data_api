@@ -7,6 +7,13 @@ flake8:
 isort:
 	@isort ./market_data
 
+pylint:
+	@pylint ./market_data 
+
+reqs:
+	@pip install -r requirements.txt
+
 checks:
+	@make reqs
 	@make black
 	@make flake8
