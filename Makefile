@@ -15,5 +15,8 @@ reqs:
 
 checks:
 	@make reqs
+	@make pylint
 	@make black
 	@make flake8
+	@make isort
+	
