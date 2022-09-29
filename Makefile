@@ -7,6 +7,12 @@ flake8:
 isort:
 	@isort ./market_data --check --skip="./market_data/tests/*"
 
+docstring:
+	@pydocstyle --match='(?!test_).*\.py' --convention=google ./market_data
+
+#perflint:
+#	@perflint --rcfile .pylintrc ./market_data --ignore=tests
+
 reqs:
 	@pip install -r requirements.txt
 
@@ -19,4 +25,5 @@ checks:
 	@make black
 	@make flake8
 	@make isort
+	@make docstring
 	
