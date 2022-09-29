@@ -16,20 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Check RELEASE notes in market_data_api
-      if: ${{ github.event.pull_request.base.sha }}
-      run: |
-        git fetch origin develop ${{ github.event.pull_request.base.sha }}
-        releases_files=$( git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- citec_research/RELEASE.md -- citec_lib/citecai/RELEASE.md -- citec_brokerage/RELEASE.md |xargs)
-        echo "RELEASE files changed:"
-        echo $releases_files
-        echo "-------"
-        if [ -z "$releases_files" ]
-        then
-              exit 1
-        else
-              exit 0
-        fi
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
