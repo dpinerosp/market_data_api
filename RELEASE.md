@@ -3,6 +3,7 @@
 ### What’s new
 
 -  Configure market_data_api project
+-  Configure github actions
 
 ### What’s been fixed
 
