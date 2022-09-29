@@ -1,4 +1,6 @@
+"""Market Data Api main."""
 
-from fastapi import FastAPI
 
-app = FastAPI()
+def dummy_function():
+    """Dummy function."""
+    return 1
