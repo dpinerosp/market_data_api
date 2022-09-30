@@ -1,1 +1,1 @@
-uvicorn market_data.main:market_data --reload
+cd market_data && uvicorn main:market_data --reload
