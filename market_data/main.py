@@ -1,6 +1,24 @@
-"""Market Data Api main."""
+"""Market Data main."""
+from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 
 
-def dummy_function():
-    """Dummy function."""
-    return 1
+# Create market_data instance
+market_data = FastAPI(
+    title="Market Data",
+    description="Market Data Api",
+    contact={
+        "name": "Danilo Piñeros",
+        "url": "https://danilopineros.com",
+        "email": "dspinerosp@gmail.com"
+    }
+)
+
+# Add middlewares
+market_data.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
