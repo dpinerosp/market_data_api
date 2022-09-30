@@ -4,6 +4,7 @@
 
 -  Configure market_data_api project
 -  Configure github actions
+-  Create endpoint GET /news/historical/
 
 ### What’s been fixed
 
