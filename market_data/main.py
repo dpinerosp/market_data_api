@@ -1,6 +1,6 @@
 """Market Data main."""
 from fastapi import FastAPI
-from routes.news import historical
+from routes import news
 from starlette.middleware.cors import CORSMiddleware
 
 # Create market_data instance
@@ -24,4 +24,4 @@ market_data.add_middleware(
 )
 
 
-market_data.include_router(historical.router)
+market_data.include_router(news.router)
