@@ -1,5 +1,5 @@
 black:
-	@black ./market_data --check
+	@black ./market_data --check --line-length 79
 
 flake8:
 	@flake8 ./market_data --max-line-length 79 --exclude=tests
